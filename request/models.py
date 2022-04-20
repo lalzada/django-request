@@ -35,6 +35,7 @@ class Request(models.Model):
     referer = models.URLField(_('referer'), max_length=255, blank=True, null=True)
     user_agent = models.CharField(_('user agent'), max_length=255, blank=True, null=True)
     language = models.CharField(_('language'), max_length=255, blank=True, null=True)
+    body = models.TextField(_('body'), blank=True, null=True)
 
     objects = RequestManager()
 
